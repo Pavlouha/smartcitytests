@@ -12,6 +12,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 public class GoodLogin {
 
     public void getGoodLogin() throws InterruptedException {
+        System.out.println("Проверка правильного логина, вывод первой жалобы на странице");
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver, 10);
         try {
