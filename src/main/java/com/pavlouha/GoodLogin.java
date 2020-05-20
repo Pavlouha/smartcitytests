@@ -19,6 +19,7 @@ public class GoodLogin {
             driver.findElement(By.name("email")).sendKeys("pkesler30@gmail.com");
             driver.findElement(By.name("pass")).sendKeys("qwerty" + Keys.ENTER);
             WebElement firstResult = wait.until(presenceOfElementLocated(By.name("PreviousReceiver")));
+            //Если логин успешен, вывод состояний жалобы
             System.out.println(firstResult.getText());
             Thread.sleep(5000);
         }finally {
