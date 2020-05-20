@@ -20,12 +20,12 @@ public class Moderator {
             driver.get("http://seniorkot.com:8000/login/");
             driver.findElement(By.name("email")).sendKeys("pkesler30@gmail.com");
             driver.findElement(By.name("pass")).sendKeys("qwerty" + Keys.ENTER);
-            driver.navigate().to("http://seniorkot.com:8000/all_user?sort=-role");
+            driver.navigate().to("http://seniorkot.com:8000/all_user?sort=role");
             WebElement firstResult = wait.until(presenceOfElementLocated(By.className("even")));
             System.out.println(firstResult.getText());
             Select select = new Select(driver.findElement(By.tagName("select")));
-            select.selectByValue("5_2");
-            driver.navigate().to("http://seniorkot.com:8000/all_user?sort=-role");
+            select.selectByValue("6_1");
+            driver.navigate().to("http://seniorkot.com:8000/all_user?sort=role");
             System.out.println("Изменённая роль");
             WebElement secondResult = wait.until(presenceOfElementLocated(By.className("even")));
             System.out.println(secondResult.getText());

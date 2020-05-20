@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WrongLogin {
 
     public void getWrongLogin() throws InterruptedException {
+        System.out.println("Неправильный логин");
         WebDriver driver = new ChromeDriver();
         try {
             driver.get("http://seniorkot.com:8000/login/");
