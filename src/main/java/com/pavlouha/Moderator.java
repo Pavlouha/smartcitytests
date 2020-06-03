@@ -34,5 +34,4 @@ public class Moderator {
             driver.quit();
         }
     }
-
 }

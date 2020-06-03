@@ -21,14 +21,14 @@ public class ReportStateChange {
             driver.findElement(By.name("pass")).sendKeys("qwerty" + Keys.ENTER);
             driver.navigate().to("http://seniorkot.com:8000/all?sort=-status");
             Select select = new Select(driver.findElement(By.tagName("select")));
-select.selectByValue("16_3");
+select.selectByValue("19_3");
             Thread.sleep(2000);
             driver.navigate().to("http://seniorkot.com:8000/all?sort=status");
             Thread.sleep(1000);
             Select select2 = new Select(driver.findElement(By.tagName("select")));
             WebElement firstResult = wait.until(presenceOfElementLocated(By.className("even")));
             System.out.println(firstResult.getText());
-            select2.selectByValue("16_1");
+            select2.selectByValue("19_1");
             WebElement secondResult = wait.until(presenceOfElementLocated(By.className("even")));
             System.out.println(secondResult.getText());
         }finally {
